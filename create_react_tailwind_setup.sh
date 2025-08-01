@@ -12,8 +12,8 @@ npm install tailwindcss@latest @tailwindcss/cli@latest
 touch ./src/style.css ./src/tailwind.css
 echo '@import "tailwindcss";' > ./src/tailwind.css
 sed -i '/"dev":/a\ \ \ \ "tailwindcss": "npx @tailwindcss/cli -i ./src/tailwind.css -o ./src/style.css --watch",' package.json
- sed -i "s/import '\.\/index\.css'/import '\.\/style\.css'/" ./src/main.jsx
-sed -i 's/import .\/App.css/import .\/style.css/' ./src/App.jsx
+ sed -i "s/import '\.\/index\.css'/import '\.\/style\.css'/" ./src/main.*
+sed -i 's/import .\/App.css/import .\/style.css/' ./src/App.*
 sed -i "/plugins/a\ server:\{\n\thost:\"0.0.0.0\",\n\tport:3000\}" vite.config.js
 
 
